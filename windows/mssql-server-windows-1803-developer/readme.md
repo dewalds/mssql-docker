@@ -14,8 +14,7 @@ This is the Dockerfile for the latest version of SQL Server Developer Edition fo
 
 ## About this sample
 
-1. **Applies to:** SQL Server Developer Edition, Windows Server 2016, Windows 10
-5. **Authors:** Perry Skountrianos [perrysk-msft]
+1. **Applies to:** SQL Server Developer Edition, Windows Server 1803
 
 <a name=before-you-begin></a>
 
@@ -29,7 +28,7 @@ You can run the container with the following command.
 (Note the you'll need Windows Server 2016 or Windows 10)
 
 ````
-docker run -d -p 1433:1433 -v C:/temp/:C:/temp/ -e sa_password=<YOUR SA PASSWORD> -e ACCEPT_EULA=Y -e attach_dbs="<DB-JSON-CONFIG>" microsoft/mssql-server-windows-developer
+docker run -d -p 1433:1433 -v C:/temp/:C:/temp/ -e sa_password=<YOUR SA PASSWORD> -e ACCEPT_EULA=Y -e attach_dbs="<DB-JSON-CONFIG>" magelight/mssql-server-windows-1803-developer
 ````
 
 - **-p HostPort:containerPort** is for port-mapping a container network port to a host port.
