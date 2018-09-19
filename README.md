@@ -15,12 +15,6 @@ Visit the [Microsoft Docker Hub page](https://hub.docker.com/u/microsoft) for mo
 - [Getting started guide for the SQL Server on Linux container](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 - [Best practices guide](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-docker)
 
-## Take our survey
-
-Let us know more about how you would like to use SQL containers by taking our survey:
-
-<a href="https://www.surveymonkey.com/r/XXSY536"><img style="float: right;"  height="67" width="156" src="https://meetsstorenew.blob.core.windows.net/contianerhd/survey.png?st=2017-02-17T22%3A03%3A00Z&se=2100-02-18T22%3A03%3A00Z&sp=rl&sv=2015-12-11&sr=b&sig=DJSFoihBptSvO%2BjvWzwpHecf8o5yfAbJoD2qW5oB8tc%3D"></a>
-
 ## Issues
 
 For any issues, please file under this GitHub project on the [Issues section](https://github.com/Microsoft/mssql-docker/issues).
