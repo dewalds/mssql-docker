@@ -1,4 +1,4 @@
-# mssql-server-windows-developer
+# mssql-server-windows-1803-developer
 This is the Dockerfile for the latest version of SQL Server Developer Edition for Windows Containers.
 
 ### Contents
