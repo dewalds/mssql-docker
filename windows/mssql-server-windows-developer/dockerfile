@@ -1,6 +1,8 @@
-FROM microsoft/windowsservercore
+ARG WINIMAGE=mcr.microsoft.com/windows/servercore:ltsc2019
 
-LABEL maintainer "Perry Skountrianos"
+FROM ${WINIMAGE}
+
+LABEL maintainer "Dewald Slabbert"
 
 # Download Links:
 ENV exe "https://go.microsoft.com/fwlink/?linkid=840945"
@@ -17,7 +19,8 @@ SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPref
 COPY start.ps1 /
 WORKDIR /
 
-RUN Invoke-WebRequest -Uri $env:box -OutFile SQL.box ; \
+RUN Set-ExecutionPolicy Unrestricted; \
+        Invoke-WebRequest -Uri $env:box -OutFile SQL.box ; \
         Invoke-WebRequest -Uri $env:exe -OutFile SQL.exe ; \
         Start-Process -Wait -FilePath .\SQL.exe -ArgumentList /qs, /x:setup ; \
         .\setup\setup.exe /q /ACTION=Install /INSTANCENAME=MSSQLSERVER /FEATURES=SQLEngine /UPDATEENABLED=0 /SQLSVCACCOUNT='NT AUTHORITY\System' /SQLSYSADMINACCOUNTS='BUILTIN\ADMINISTRATORS' /TCPENABLED=1 /NPENABLED=0 /IACCEPTSQLSERVERLICENSETERMS ; \
