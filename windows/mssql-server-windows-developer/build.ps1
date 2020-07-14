@@ -1,5 +1,5 @@
 docker build -t `
-scth/mssql-server-windows-2019-developer:latest `
+scth/mssql-server-windows-2019-developer:local `
     --no-cache `
     .
 
